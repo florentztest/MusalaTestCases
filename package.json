@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "test": "cypress open",
+    "mochawesome": "cypress run --reporter mochawesome"
+  },
+  "devDependencies": {
+    "cypress": "^9.5.2",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-mochawesome-reporter": "^3.0.0",
+    "cypress-xpath": "^1.6.2",
+    "mochawesome-merge": "^4.2.1"
+  }
+}

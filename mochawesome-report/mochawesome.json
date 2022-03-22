@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-03-22T00:43:38.720Z",
+    "end": "2022-03-22T00:43:53.141Z",
+    "duration": 14421,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d8d79a69-6f3c-46be-8671-1779e83752a6",
+      "title": "",
+      "fullFile": "cypress/integration/test_case_4.spec.js",
+      "file": "cypress/integration/test_case_4.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b3fd0b8a-7f7b-46a9-be71-d7669da6d4d6",
+          "title": "Test case 4",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "",
+              "fullTitle": "Test case 4 ",
+              "timedOut": null,
+              "duration": 12719,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.xpath(\"//div[@id='menu']/descendant::a[contains(@href,'https://www.musala.com/careers/')]\").click({\n  force: true\n});\ncy.get(\"section[class='link_field']\").find(\"a[href='join-us/']\").click();\ncy.url().should('eq', 'https://www.musala.com/careers/join-us/');\ncy.get(\"select[id='get_location']\").select('Sofia'); //get all job titles for Sofia\ncy.get(\"h2[class='card-jobsHot__title']\").each($btn => {\n  //put every title in variable\n  let txt = $btn.text();\n  cy.log(\"Sofia open positions:\"); //log the job title\n  cy.log(\"Position: \" + txt + \"\\n\"); //get the a parent of every job\n  cy.xpath(`//h2[contains(text(),'${txt}')]/ancestor-or-self::a`).each($parentA => {\n    //get the href value and put it in variable\n    let aText = $parentA.attr('href'); //log the href value\n    cy.log(\"More information: \" + aText);\n  });\n}); //Skopje\ncy.get(\"select[id='get_location']\").select('Skopje'); //Do the same for Skopje // TO DO: Make this a function\ncy.get(\"h2[class='card-jobsHot__title']\").each($btn => {\n  let txt = $btn.text();\n  cy.log(\"Skopje open positions:\");\n  cy.log(\"Position: \" + txt + \"\\n\");\n  cy.xpath(`//h2[contains(text(),'${txt}')]/ancestor-or-self::a`).each($parentA => {\n    let aText = $parentA.attr('href');\n    cy.log(\"More information: \" + aText);\n  });\n});",
+              "err": {},
+              "uuid": "a612b37b-e5ea-49d0-8358-fa3d92c13dd0",
+              "parentUUID": "b3fd0b8a-7f7b-46a9-be71-d7669da6d4d6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a612b37b-e5ea-49d0-8358-fa3d92c13dd0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12719,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.2"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.1.1"
+    }
+  }
+}

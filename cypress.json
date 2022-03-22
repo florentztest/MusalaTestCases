@@ -1,0 +1,10 @@
+{
+    "baseUrl": "http://www.musala.com/",
+    "chromeWebSecurity": false,
+    "reporter": "mochawesome",
+  "reporterOptions": {
+    "overwrite": false,
+    "html": false,
+    "json": true
+  }
+}
