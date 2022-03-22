@@ -26,7 +26,7 @@ describe('Test case 4', () => {
             //log the job title
             cy.log("Position: " + txt + "\n")
             //get the a parent of every job
-            cy.xpath(`//h2[contains(text(),'${txt}')]/ancestor-or-self::a`).each(($parentA) => {
+             cy.xpath(`//h2[text()='${txt}']/ancestor-or-self::a`).each(($parentA) => {
                 //get the href value and put it in variable
                 let aText = $parentA.attr('href') 
                 //log the href value
